@@ -12,8 +12,8 @@ public class Main {
         suggestAppVersion(clientOS, clientDeviceYear);
 
         int deliveryDistance = 95;
-        calculateDelivery(deliveryDistance);
-
+        String cat = calculateDelivery(deliveryDistance);
+        System.out.println(cat);
     }
 
     public static void checkLeapYear(int year) {
@@ -52,19 +52,16 @@ public class Main {
         int day = 1;
         if (deliveryDistance <= 20) {
 
-            return "Доставка занимает суток" + day;
+            return "Доставка занимает суток " + day;
         } else if (20 <= deliveryDistance && deliveryDistance <= 60) {
 
-            return "Доставка занимает суток" + (day + 1);
+            return "Доставка занимает суток " + (day + 1);
         } else if (60 <= deliveryDistance && deliveryDistance <= 100) {
 
-            return "Доставка занимает суток" + (day + 2);
+            return "Доставка занимает суток " + (day + 2);
         } else {
 
             return "Доставки нет";
         }
-
-
-
     }
 }
